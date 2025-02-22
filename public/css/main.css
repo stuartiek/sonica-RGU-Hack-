@@ -77,6 +77,8 @@ body{
     cursor: pointer;
 }
 .headerNav{
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
