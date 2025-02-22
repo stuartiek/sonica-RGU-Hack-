@@ -6,7 +6,7 @@ const saltRounds = 10;
 const MongoClient = require('mongodb-legacy').MongoClient;
 const url = 'mongodb://127.0.0.1:27017';
 const client = new MongoClient(url);
-const dbname = 'stockplus';
+const dbname = 'hack';
 
 // LOAD NPM PACKAGES
 let express = require('express');
