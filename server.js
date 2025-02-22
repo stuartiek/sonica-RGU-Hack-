@@ -67,7 +67,7 @@ app.get('/dashboard', function(req, res){
 
 
 // datapage
-app.get('/dataPage', function(req, res){
+app.get('/datapage', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}
     db.collection("wildlife").find().toArray(function(err, result){
         if(err) throw err;
@@ -75,7 +75,7 @@ app.get('/dataPage', function(req, res){
     })
 
     res.render('pages/datapage', {
-        stock: result
+        wildlife: result
     });
 
 });
