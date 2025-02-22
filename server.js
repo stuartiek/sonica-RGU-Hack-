@@ -129,6 +129,21 @@ app.post('/addStock', function(req, res){
     });
 });
 
+//ADDS FORM DATA TO DATABASE
+app.post('/addData', function(req, res){
+    //data needs stored
+    var wilddatatostore = {
+        "wildlifeObservations": req.body.MWO,
+        "wildImage": req.body.wildImage,
+        "Location": req.body.Location
+    }
+    db.collection('wildlife').insertOne(wilddatatostore, function(err, result){
+        if (err) throw err;
+            console.log("Saved to database");
+            //when complete take back to index
+        res.redirect('/dashboard');
+    });
+});
 
 
 
