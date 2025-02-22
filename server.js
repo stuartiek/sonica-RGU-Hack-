@@ -41,6 +41,10 @@ app.get('/', function(req, res){
     res.render('pages/index');
 });
 
+app.get('/signup', function(req, res){
+    res.render('pages/signup');
+});
+
 // DASHBOARD PAGE
 app.get('/dashboard', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}
