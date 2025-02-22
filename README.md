@@ -1,10 +1,10 @@
 # sonica-RGU-Hack-
 
 TASKLIST
-----------
-FORM PAGE - Data Submission
-DASHBOARD - Visualisation of data trends
-DATA PAGE - Display all animal data, filter and search on multiple parameters
+
+- FORM PAGE (Data Submission)
+- DASHBOARD (Visualisation of data trends)
+- DATA PAGE (Display all animal data, filter and search on multiple parameters)
 
 FORM INPUTS
 - Manual Wildlife Observations
