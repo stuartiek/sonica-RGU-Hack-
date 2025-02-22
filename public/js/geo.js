@@ -34,7 +34,7 @@ function appPosition(position){
 }
 
 //console.log(userlat, userlng);
-getLocation();
+window.onload = getLocation();
 console.log(userlat, userlng);
 console.log(location)
 
