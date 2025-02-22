@@ -146,7 +146,7 @@ app.get('/users', function(req, res){
 
 
 // SIGN-UP
-app.post('/signUp', async function(req, res){
+app.post('/signup', async function(req, res){
 
     bcrypt.genSalt(saltRounds, function(err, salt){
         if(err) throw err;
