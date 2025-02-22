@@ -38,3 +38,5 @@ getLocation();
 console.log(userlat, userlng);
 console.log(location)
 
+document.getElementById('formLocation').innerHTML = location;
+
