@@ -90,3 +90,13 @@ nav{
     flex-direction: row;
     justify-content: space-evenly;
 }
+nav ul{
+    list-style-type: none;
+}
+
+nav li a{
+    display: block;
+    color: #444444;
+    padding: 8px 16px;
+    text-decoration: none;
+}
