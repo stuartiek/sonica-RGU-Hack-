@@ -82,12 +82,17 @@ app.get('/datapage', function(req, res){
 
 //ADDS FORM DATA TO DATABASE
 app.post('/addData', function(req, res){
+    const isoDate = new Date();
+    const ISO = isoDate.toISOString();
     //data needs stored
     var wilddatatostore = {
         "wildlifeObservations": req.body.MWO,
         "wildImage": req.body.wildImage,
+        "species": req.body.species,
         "Location": req.body.Location,
-        "SpeciesImage": req.body.speciesImage
+        "SpeciesImage": req.body.speciesImage,
+        "username": req.session.currentuser,
+        "date": ISO.slice(0 , 19) // Cuts out unwanted date information
     }
     db.collection('wildlife').insertOne(wilddatatostore, function(err, result){
         if (err) throw err;
