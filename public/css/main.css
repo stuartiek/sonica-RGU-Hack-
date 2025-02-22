@@ -76,7 +76,11 @@ body{
     box-shadow:  20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
     cursor: pointer;
 }
-
+.headerNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .navLogo img{
     width: 200px;
     height: 100px;
