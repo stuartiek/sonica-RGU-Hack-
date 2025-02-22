@@ -85,7 +85,7 @@ body{
     width: 200px;
     height: 100px;
 }
-.nav{
+nav{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
