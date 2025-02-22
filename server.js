@@ -75,7 +75,7 @@ app.get('/datapage', function(req, res){
     })
 
     res.render('pages/datapage', {
-        stock: result
+        wildlife: result
     });
 
 });
