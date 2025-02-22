@@ -26,6 +26,9 @@ function appPosition(position){
     console.log(foundAddress.properties.city);
     console.log(foundAddress.properties.country);
 
+    locationName = foundAddress.properties.city + " , " + foundAddress.properties.country;
+    console.log(locationName);
+
     });
 
 }
