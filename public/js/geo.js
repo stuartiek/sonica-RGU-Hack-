@@ -15,13 +15,12 @@ function appPosition(position){
     userlat = position.coords.latitude;
     userlng = position.coords.longitude;
 
-    console.log(userlat, userlng);
-
     return userlat, userlng;
 }
 
 //console.log(userlat, userlng);
 getLocation();
+console.log(userlat, userlng);
 
 const reverseGeocodingUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${userlat}&lon=${userlng}&apiKey=${myAPIKey}`;
 
