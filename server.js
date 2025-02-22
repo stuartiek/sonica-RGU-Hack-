@@ -86,6 +86,7 @@ app.post('/addData', function(req, res){
     var wilddatatostore = {
         "wildlifeObservations": req.body.MWO,
         "wildImage": req.body.wildImage,
+        "species": req.body.species,
         "Location": req.body.Location,
         "SpeciesImage": req.body.speciesImage
     }
