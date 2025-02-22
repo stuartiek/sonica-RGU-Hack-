@@ -135,7 +135,8 @@ app.post('/addData', function(req, res){
     var wilddatatostore = {
         "wildlifeObservations": req.body.MWO,
         "wildImage": req.body.wildImage,
-        "Location": req.body.Location
+        "Location": req.body.Location,
+        "SpeciesImage": req.body.speciesImage
     }
     db.collection('wildlife').insertOne(wilddatatostore, function(err, result){
         if (err) throw err;
