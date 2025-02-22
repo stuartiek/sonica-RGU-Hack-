@@ -29,6 +29,8 @@ function appPosition(position){
     locationName = foundAddress.properties.city + " , " + foundAddress.properties.country;
     console.log(locationName);
 
+    document.getElementById('formLocation').value = location;
+
     });
 
 }
@@ -37,6 +39,4 @@ function appPosition(position){
 window.onload = getLocation();
 console.log(userlat, userlng);
 console.log(location)
-
-document.getElementById('formLocation').value = location;
 
