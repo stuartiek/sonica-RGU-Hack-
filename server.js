@@ -73,61 +73,8 @@ app.get('/labels', function(req, res){
     res.render('pages/labels')
 });
 
-//STOCK PAGE
-app.get('/stock', function(req, res){
-    if(!req.session.loggedin){res.redirect('/');return;}
-
-    var stockSort = { 
-        "published": -1 
-    };
-    db.collection('stock').find().sort(stockSort).toArray(function(err, result){
-        if (err) throw err;
 
 
-        db.collection('stock').countDocuments(function(err, count){
-
-    
-            res.render('pages/stock', {
-                stock: result,
-                stockCount: count
-            });
-        });
-    });
-});
-
-// app.post('deleteStock', function(req, res){
-//     var queryDelete = document.getElementById("id_delete");
-//     function deleteStock(){
-//         db.collection("stock").deleteOne(queryDelete, function(err, obj){
-        
-//         });
-//     }
-    
-// });
-
-//ADDS STOCK TO DATABASE
-app.post('/addStock', function(req, res){
-    //data needs stored
-    const isoDate = new Date();
-    const ISO = isoDate.toISOString();
-    var datatostore = {
-        "productName":req.body.productName,
-        "productCode":req.body.productCode,
-        "brand":req.body.Brand,
-        "category":req.body.Category,
-        "qty":req.body.Qty,
-        "rrp":req.body.RRP,
-        "price":req.body.Price,
-        "barcode":req.body.Barcode,
-        "published":ISO.slice(0 , 19) // Cuts out unwanted date information
-    }
-    db.collection('stock').insertOne(datatostore, function(err, result){
-        if (err) throw err;
-            console.log("saved to database");
-            //when complete redirect back to index
-        res.redirect('/stock');
-    });
-});
 
 //ADDS FORM DATA TO DATABASE
 app.post('/addData', function(req, res){
@@ -227,23 +174,6 @@ app.post('/login', async function(req, res){
         });
     });
 });
-
-
-
-
-
-
-app.post('/delete/:id', async (req, res) => {
-
-    //await db.collection('stock').deleteOne({ _id: 'D'});
-    await stock.deleteOne({_id: req.params.id})
-        res.redirect('/')
-});
-
-
-
-
-
 
 //LOGOUT
 app.get('/logout', function(req, res){
