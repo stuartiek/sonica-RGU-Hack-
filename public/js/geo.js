@@ -29,7 +29,7 @@ function appPosition(position){
     locationName = foundAddress.properties.city + " , " + foundAddress.properties.country;
     console.log(locationName);
 
-    document.getElementById('formLocation').value = location;
+    document.getElementById('formLocation').value = locationName;
 
     });
 
