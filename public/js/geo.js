@@ -23,8 +23,8 @@ function appPosition(position){
     }
 
     const foundAddress = featureCollection.features[0];
-    console.log(foundAddress.properties.city);
-    console.log(foundAddress.properties.country);
+    //console.log(foundAddress.properties.city);        //Shows City
+    //console.log(foundAddress.properties.country);     //Shows Country
 
     locationName = foundAddress.properties.city + " , " + foundAddress.properties.country;
     console.log(locationName);
@@ -36,19 +36,5 @@ function appPosition(position){
 //console.log(userlat, userlng);
 getLocation();
 console.log(userlat, userlng);
+console.log(location)
 
-const reverseGeocodingUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${userlat}&lon=${userlng}&apiKey=${myAPIKey}`;
-
-// call Reverse Geocoding API - https://www.geoapify.com/reverse-geocoding-api/
-fetch(reverseGeocodingUrl).then(result => result.json())
-.then(featureCollection => {
-  if (featureCollection.features.length === 0) {
-    console.log("Address Not Found");
-    return;
-  }
-
-  const foundAddress = featureCollection.features[0];
-  console.log(foundAddress.properties.city);
-  console.log(foundAddress.properties.country);
-
-});
