@@ -85,16 +85,20 @@ body{
     width: 200px;
     height: 100px;
 }
-nav{
+/* nav{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
+} */
 nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     list-style-type: none;
 }
 
 nav li a{
+
     color: #444444;
     padding: 8px 16px;
     text-decoration: none;
