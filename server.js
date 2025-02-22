@@ -65,16 +65,20 @@ app.get('/dashboard', function(req, res){
    
 });
 
-//LABELS PAGE
-app.get('/labels', function(req, res){
+
+// datapage
+app.get('/dataPage', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}
+    db.collection("wildlife").find().toArray(function(err, result){
+        if(err) throw err;
 
+    })
 
-    res.render('pages/labels')
+    res.render('pages/datapage', {
+        stock: result
+    });
+
 });
-
-
-
 
 //ADDS FORM DATA TO DATABASE
 app.post('/addData', function(req, res){
