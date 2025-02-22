@@ -18,6 +18,7 @@ function appPosition(position){
     return userlat, userlng;
 }
 
+getLocation();
 
 const reverseGeocodingUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${userlat}&lon=${userlng}&apiKey=${myAPIKey}`;
 
