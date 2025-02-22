@@ -6,3 +6,39 @@ Location (GPS Integration? or Manual)
 Photo Submission for species identification (Image Submission)
 
 -->
+
+<!-- VISUALISATION OF TRENDS ETC-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DashBoard</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="apple-touch-icon" href="styles/images/logo/UWP/ABZ_icon256.png">
+        <link rel="icon" type="image/x-icon" href="images/logo/favicon.png">
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <h1>FORM</h1>
+        <div class="dataform">
+             
+            <div class="dataForm">
+                <form autocomplete="off" action="/addData" method="post">
+                    <div class="form-group">
+                        <input type="text" name="MWO" class="form-control" placeholder="Wildlife Observations">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="wildImage" accept="image/png, image/jpeg" />
+                    </div>    
+                    <div class="form-group">
+                        <input type="text" name="Location" class="form-control" placeholder="Location">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Submit"></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

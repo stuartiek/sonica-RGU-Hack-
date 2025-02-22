@@ -41,6 +41,10 @@ app.get('/', function(req, res){
     res.render('pages/index');
 });
 
+app.get('/dataform', function(req, res){
+    res.render('pages/dataform');
+});
+
 app.get('/signup', function(req, res){
     res.render('pages/signup');
 });
