@@ -26,7 +26,7 @@ function appPosition(position){
     //console.log(foundAddress.properties.city);        //Shows City
     //console.log(foundAddress.properties.country);     //Shows Country
 
-    locationName = foundAddress.properties.city + " , " + foundAddress.properties.country;
+    locationName = foundAddress.properties.city + ", " + foundAddress.properties.country;
     console.log(locationName);
 
     document.getElementById('formLocation').value = locationName;
