@@ -84,7 +84,7 @@ app.get('/datapage', function(req, res){
 
 // data search
 app.post('/search', function(req, res){
-    
+
     if(!req.session.loggedin){res.redirect('/');return;}
 
     db.collection("wildlife").find().toArray(function(err, result){
@@ -101,7 +101,7 @@ app.post('/search', function(req, res){
         if(err) throw err;
 
         res.render('pages/datapage', {
-        
+            speciesResult: Speciesresult
         })
         console.log(Speciesresult);
     });
