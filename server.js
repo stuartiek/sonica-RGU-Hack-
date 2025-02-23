@@ -85,16 +85,16 @@ app.get('/datapage', function(req, res){
 
 // data search
 
-app.get('/search', function(req, res){
-    db.collection('wildlife').find({"species":searchWild}, function(err, result){
-        res.render('pages/datapage', {
-            searchResult: result
-        })
+// app.get('/search', function(req, res){
+//     db.collection('wildlife').find({"species":searchWild}, function(err, result){
+//         res.render('pages/datapage', {
+//             searchResult: result
+//         })
 
-    });
+//     });
 
     
-});
+// });
 
 //ADDS FORM DATA TO DATABASE
 app.post('/addData', function(req, res){
