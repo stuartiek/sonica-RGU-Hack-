@@ -56,12 +56,16 @@ app.get('/dashboard', function(req, res){
     //Gets current user
     var currentuser = req.session.currentuser;
 
-    db.collection('wildlife').countDocuments(function(err, count){
+    db.collection('wildlife').aggregate([{$group: {speciesType: "$species", totalSpecies: {$sum:"$species"}}}])
 
+    db.collection('wildlife').countDocuments(function(err, count){
+        db.collection('wildlife').aggregate([{$group: {speciesType: "$species", totalSpecies: {$sum:"$species"}}}])
+        
         res.render('pages/dashboard', {
             user: currentuser,
             wildCount: count
         })
+        console.log($group);
     });
    
 });
