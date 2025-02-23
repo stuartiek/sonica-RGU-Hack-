@@ -76,6 +76,7 @@ app.get('/datapage', function(req, res){
 
         res.render('pages/datapage', {
         wildlife: result,
+        speciesResult: null
         })
     });
     
@@ -91,7 +92,8 @@ app.post('/search', function(req, res){
         if(err) throw err;
 
         res.render('pages/datapage', {
-        wildlife: result
+        wildlife: result,
+        speciesResult: null
         })
     });
 
