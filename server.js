@@ -83,6 +83,14 @@ app.get('/datapage', function(req, res){
 
 });
 
+// data search
+app.get('/datapage', function(req, res){
+    if(!req.session.loggedin){res.redirect('/');return;}
+    db.collection('wildlife').find('wildsearch').toArray(function(err, result){
+        if(err) throw err;
+    })
+})
+
 //ADDS FORM DATA TO DATABASE
 app.post('/addData', function(req, res){
     const isoDate = new Date();
