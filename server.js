@@ -87,6 +87,7 @@ app.get('/datapage', function(req, res){
 
 app.post('/search', function(req, res){
     db.collection('wildlife').find({"species":req.body.searchWild}, function(err, result){
+        console.log(req.body.searchWild);
         res.render('pages/datapage', {
             searchResult: result
         })
