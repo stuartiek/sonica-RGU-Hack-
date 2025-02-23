@@ -25,26 +25,29 @@ To-do list
     <body>
         <%- include('../partials/header') %>
 
-        <div>
-            <table>
-                <tr>
-                    <th>Observation</th>
-                    <th>Wildlife Img</th>
-                    <th>Species</th>
-                    <th>Location</th>
-                    <th>Username</th>
-                    <th>Date</th>
-                </tr>
-            <% wildlife.forEach(function(wildlife) { %>
-                <tr>
-                    <td><%= wildlife.wildlifeObservations %></td>
-                    <td><%= wildlife.wildImage %></td>
-                    <td><%= wildlife.species %></td>
-                    <td><%= wildlife.Location %></td>
-                    <td><%= wildlife.username %></td>
-                    <td><%= wildlife.date %></td>
-                </tr>
-        <% }); %>
-        </div>
+        <main>
+           <div>
+                <table>
+                    <tr>
+                        <th>Observation</th>
+                        <th>Wildlife Img</th>
+                        <th>Species</th>
+                        <th>Location</th>
+                        <th>Username</th>
+                        <th>Date</th>
+                    </tr>
+                <% wildlife.forEach(function(wildlife) { %>
+                    <tr>
+                        <td><%= wildlife.wildlifeObservations %></td>
+                        <td><%= wildlife.wildImage %></td>
+                            <td><%= wildlife.species %></td>
+                            <td><%= wildlife.Location %></td>
+                            <td><%= wildlife.username %></td>
+                            <td><%= wildlife.date %></td>
+                        </tr>
+                <% }); %>
+            </div> 
+        </main>
+        
     </body>
 </html>
