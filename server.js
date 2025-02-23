@@ -47,7 +47,6 @@ app.get('/dataform', function(req, res){
 });
 
 app.get('/signup', function(req, res){
-    if(!req.session.loggedin){res.redirect('/');return;}
     res.render('pages/signup');
 });
 
