@@ -86,12 +86,12 @@ app.get('/datapage', function(req, res){
 // data search
 
 app.post('/search', function(req, res){
+    console.log(req.body.searchWild);
     db.collection('wildlife').find({"species":req.body.searchWild}, function(err, result){
         console.log(req.body.searchWild);
         res.render('pages/datapage', {
             searchResult: result
         })
-        console.log(searchResult);
 
     });
 
