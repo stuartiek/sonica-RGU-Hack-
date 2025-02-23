@@ -75,11 +75,12 @@ app.get('/datapage', function(req, res){
     db.collection("wildlife").find().toArray(function(err, result){
         if(err) throw err;
 
-    })
-
-    res.render('pages/datapage', {
+        res.render('pages/datapage', {
         wildlife: result
-    })
+        })
+    });
+
+    
 
 });
 
