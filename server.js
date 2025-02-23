@@ -86,7 +86,7 @@ app.get('/datapage', function(req, res){
 // data search
 
 app.post('/search', function(req, res){
-    searchWild = document.getElementById("searchWild").ariaValueMax;
+    searchWild = document.getElementById("searchWild").value;
     db.collection('wildlife').find({"species":searchWild}, function(err, result){
         res.render('pages/datapage', {
             searchResult: result
