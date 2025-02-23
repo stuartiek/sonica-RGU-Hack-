@@ -29,7 +29,6 @@ To-do list
             <!-- Insert Here -->
             <% wildlife.forEach(function(wildlife) { %>
                 <tr>
-                    <td id="id_delete"><%= stock._id %></td>
                     <td><%= wildlife.wildlifeObservation %></td>
                     <td><%= wildlife.wildImage %></td>
                     <td><%= wildlife.species %></td>
@@ -37,12 +36,6 @@ To-do list
                     <td><%= wildlife.SpeciesImage %></td>
                     <td>£<%= wildlife.username %></td>
                     <td>£<%= wildlife.date %></td>
-                    <td><span class="barcodeFont"><%= stock.barcode %></span></td>
-                    <td>
-                        <form action="/delete/<%= stock._id %>" method="post">
-                            <button type="submit">Delete</button>
-                        </form>
-                    </td>
                 </tr>
         <% }); %>
         </div>
