@@ -13,3 +13,9 @@ FORM INPUTS
 - Photo submission fo species identification (Optional)
 
 README test update
+
+
+Group Members:
+Matthew Holmes, m.holmes2@rgu.ac.uk
+Stuart Keith
+Allistair Mcculloch
