@@ -107,6 +107,17 @@ nav li a{
     text-decoration: none;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 12px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
 
 
 
