@@ -26,6 +26,12 @@ To-do list
         <%- include('../partials/header') %>
 
         <main>
+            <div class="search">
+                <form action="/search" method="post">
+                    <input type="search" name="searchWild" id="">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
            <div>
                 <table>
                     <tr>
