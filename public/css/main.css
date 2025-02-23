@@ -202,7 +202,9 @@ table {
     border-style: none;
     background-color: #444444;
 }
-
+.totalWild h2{
+    margin-left: 15px;
+}
 
 
 
