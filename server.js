@@ -90,7 +90,7 @@ app.post('/search', function(req, res){
         res.render('pages/datapage', {
             searchResult: result
         })
-        document.getElementById("searchResult").innerHTML = result;
+        console.log(result);
 
     });
 
