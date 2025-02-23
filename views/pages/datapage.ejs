@@ -34,7 +34,17 @@ To-do list
             </div>
            <div>
             <div id = "SpeciesResults">
-                <% speciesResult.wildlifeObservations %>
+                <% speciesResult.forEach(function(wildlife) { %>
+                    <tr>
+                        <td><%= speciesResult.wildlifeObservations %></td>
+                        <td><%= speciesResult.wildImage %></td>
+                            <td><%= speciesResult.species %></td>
+                            <td><%= speciesResult.Location %></td>
+                            <td><%= speciesResult.username %></td>
+                            <td><%= speciesResult.date %></td>
+                        </tr>
+                <% }); %>
+            </div> 
             </div>
                 <table>
                     <tr>
