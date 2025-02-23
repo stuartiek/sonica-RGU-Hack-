@@ -85,6 +85,8 @@ app.get('/datapage', function(req, res){
 // data search
 app.post('/search', function(req, res){
 
+    speciesResult = null;
+
     if(!req.session.loggedin){res.redirect('/');return;}
 
     db.collection("wildlife").find().toArray(function(err, result){
@@ -95,7 +97,6 @@ app.post('/search', function(req, res){
         })
     });
 
-    console.log(req.body.searchWild);
     searchSpecies = req.body.searchWild;
     db.collection("wildlife").find({"species":searchSpecies}).toArray(function(err, Speciesresult){
         if(err) throw err;
