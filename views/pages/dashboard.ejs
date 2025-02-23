@@ -9,6 +9,8 @@
         <link rel="apple-touch-icon" href="styles/images/logo/UWP/ABZ_icon256.png">
         <link rel="icon" type="image/x-icon" href="images/logo/favicon.png">
         <link rel="stylesheet" href="css/main.css"/>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <%- include('../partials/header') %>
@@ -16,6 +18,9 @@
             <section>
                 <div class="totalWild">
                     <h2>Total number of wildlife added: <%- wildCount %></h2>
+                </div>
+                <div>
+                    <div id="myPlot" style="width:100%;max-width:700px"></div>
                 </div>
             </section>
         </main>
