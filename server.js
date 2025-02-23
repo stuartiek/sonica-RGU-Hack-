@@ -87,7 +87,7 @@ app.get('/datapage', function(req, res){
 
 app.get('/search', function(req, res){
     db.collection('wildlife').find({"species":searchWild}, function(err, result){
-        res.render('pages/search', {
+        res.render('pages/datapage', {
             searchResult: result
         })
 
