@@ -76,7 +76,6 @@ app.get('/datapage', function(req, res){
 
         res.render('pages/datapage', {
         wildlife: result,
-        speciesResult: null
         })
     });
     
