@@ -42,10 +42,12 @@ app.get('/', function(req, res){
 });
 
 app.get('/dataform', function(req, res){
+    if(!req.session.loggedin){res.redirect('/');return;}
     res.render('pages/dataform');
 });
 
 app.get('/signup', function(req, res){
+    if(!req.session.loggedin){res.redirect('/');return;}
     res.render('pages/signup');
 });
 
@@ -66,9 +68,10 @@ app.get('/dashboard', function(req, res){
 });
 
 
-// datapage
+// DATA PAGE
 app.get('/datapage', function(req, res){
     if(!req.session.loggedin){res.redirect('/');return;}
+
     db.collection("wildlife").find().toArray(function(err, result){
         if(err) throw err;
 
@@ -76,7 +79,7 @@ app.get('/datapage', function(req, res){
 
     res.render('pages/datapage', {
         wildlife: result
-    });
+    })
 
 });
 
