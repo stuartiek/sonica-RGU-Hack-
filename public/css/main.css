@@ -6,6 +6,8 @@ body{
     height: 100vh;
 }
 
+/* LOGIN / SIGN UP PAGE */
+
 .loginHero {
     width: 40%;
     height: 100%;
@@ -19,10 +21,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-
-  
 .login {
     margin-left: 40%;
     height: 100%;
@@ -77,6 +77,8 @@ body{
     box-shadow:  20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
     cursor: pointer;
 }
+
+/* HEADER */
 .headerNav{
     margin-left: 20px;
     margin-right: 20px;
@@ -85,15 +87,12 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
 .navLogo img{
     width: 200px;
     height: 100px;
 }
-/* nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-} */
+
 nav ul{
     display: flex;
     flex-direction: row;
@@ -102,7 +101,7 @@ nav ul{
 }
 
 nav li a{
-
+    font-size: 20px;
     color: #444444;
     padding: 8px 16px;
     text-decoration: none;
@@ -110,6 +109,8 @@ nav li a{
 
 
 
+
+/* FOOTER */
 footer h2{
     text-align: center;
     font-size: 16px;
