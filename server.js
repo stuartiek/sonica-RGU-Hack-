@@ -56,11 +56,11 @@ app.get('/dashboard', function(req, res){
     //Gets current user
     var currentuser = req.session.currentuser;
 
-    db.collection('stock').countDocuments(function(err, count){
+    db.collection('wildlife').countDocuments(function(err, count){
 
         res.render('pages/dashboard', {
             user: currentuser,
-            stockCount: count
+            wildCount: count
         })
     });
    
