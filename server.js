@@ -91,20 +91,19 @@ app.post('/search', function(req, res){
     db.collection("wildlife").find().toArray(function(err, result){
         if(err) throw err;
 
-        res.render('pages/datapage', {
-        wildlife: result
-        })
-    });
+        
 
     searchSpecies = req.body.searchWild;
     db.collection("wildlife").find({"species":searchSpecies}).toArray(function(err, Speciesresult){
         if(err) throw err;
 
         res.render('pages/datapage', {
+            wildlife: result,
             speciesResult: Speciesresult
         })
         console.log(Speciesresult);
     });
+});
 
     
 });
