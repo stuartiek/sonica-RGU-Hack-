@@ -99,7 +99,6 @@ app.post('/search', function(req, res){
         res.render('pages/datapage', {
             wildlife: Speciesresult
         })
-        console.log(Speciesresult);
     });
 });
 
