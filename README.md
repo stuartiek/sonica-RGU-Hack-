@@ -16,6 +16,6 @@ README test update
 
 
 Group Members:
-Matthew Holmes, m.holmes2@rgu.ac.uk
+Matthew Holmes
 Stuart Keith
 Allistair Mcculloch
