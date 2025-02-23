@@ -57,7 +57,7 @@ app.get('/dashboard', function(req, res){
     var currentuser = req.session.currentuser;
 
     db.collection('wildlife').countDocuments(function(err, count){
-
+        
         res.render('pages/dashboard', {
             user: currentuser,
             wildCount: count
@@ -78,23 +78,33 @@ app.get('/datapage', function(req, res){
         wildlife: result
         })
     });
-
     
 
 });
 
 // data search
-
 app.post('/search', function(req, res){
-    db.collection('wildlife').find({"species":searchWild}, function(err, result){
-        res.render('pages/datapage', {
-            searchResult: result
-        })
 
+    if(!req.session.loggedin){res.redirect('/');return;}
+
+    db.collection("wildlife").find().toArray(function(err, result){
+        if(err) throw err;
+
+        
+
+    searchSpecies = req.body.searchWild;
+    db.collection("wildlife").find({"species":searchSpecies}).toArray(function(err, Speciesresult){
+        if(err) throw err;
+
+        res.render('pages/datapage', {
+            wildlife: Speciesresult
+        })
     });
+});
 
     
 });
+
 
 //ADDS FORM DATA TO DATABASE
 app.post('/addData', function(req, res){
