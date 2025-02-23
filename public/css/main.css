@@ -125,6 +125,10 @@ nav li a{
 
 /* DATA PAGE */
 
+.search{
+    margin-bottom: 50px;
+}
+
 .search form input[type=search]{
     margin-top: 20px;
     width: 400px;
