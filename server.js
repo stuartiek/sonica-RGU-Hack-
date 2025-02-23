@@ -79,26 +79,27 @@ app.get('/datapage', function(req, res){
         })
     });
 
+    app.post('/search', function(req, res){
+        console.log(req.body.searchWild);
+        searchSpecies = req.body.searchWild;
+        db.collection("wildlife").find({"species":searchSpecies}).toArray(function(err, Speciesresult){
+            if(err) throw err;
+    
+            res.render('pages/datapage', {
+            
+            })
+            console.log(Speciesresult);
+        });
+    
+        
+    });
     
 
 });
 
 // data search
 
-app.post('/search', function(req, res){
-    console.log(req.body.searchWild);
-    searchSpecies = req.body.searchWild;
-    db.collection("wildlife").find({"species":searchSpecies}).toArray(function(err, result){
-        if(err) throw err;
 
-        res.render('pages/datapage', {
-        
-        })
-        console.log(result);
-    });
-
-    
-});
 
 //ADDS FORM DATA TO DATABASE
 app.post('/addData', function(req, res){
