@@ -135,7 +135,7 @@ table {
 /* DATA FORM */
 
 
-.loginForm{
+.dataForm{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,7 +143,7 @@ table {
     height: 100%;
 }
 
-.loginForm form input[type=text]{
+.dataForm form input[type=text]{
     margin-top: 20px;
     width: 200px;
     font-size: 16px;
@@ -154,7 +154,7 @@ table {
     box-shadow:  20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
-.loginForm form input[type=password]{
+.dataForm form input[type=password]{
     margin-top: 20px;
     width: 200px;
     font-size: 16px;
@@ -165,19 +165,7 @@ table {
     box-shadow:  20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
-.loginForm form input[type=submit]{
-    margin-top: 20px;
-    width: 150px;
-    font-size: 16px;
-    padding: 15px;
-    color: #ffffff;
-    border-radius: 40px;
-    border-style: none;
-    background-color: #444444;
-    /* box-shadow:  20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; */
-    cursor: pointer;
-}
-button{
+.dataForm form input[type=submit]{
     margin-top: 20px;
     width: 150px;
     font-size: 16px;
