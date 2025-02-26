@@ -4,6 +4,7 @@ body{
     color: #444444;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
+    background-color: #fdf9eb;
 }
 main{
     margin-left: 50px;
