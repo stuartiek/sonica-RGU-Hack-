@@ -15,7 +15,8 @@ main{
     width: 40%;
     height: 100%;
     background-image:  url('/assets/indexBG.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-    background-blend-mode: overlay;
+    background-blend-mode: multiply;
+    /* background-blend-mode: overlay; */
     /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
