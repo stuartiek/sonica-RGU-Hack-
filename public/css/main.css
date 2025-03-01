@@ -103,6 +103,7 @@ button{
     justify-content: space-between;
     align-items: center;
     background-color: #fdf9eb;
+    box-shadow:  20px 20px 60px #d9d9d9, -20px -20px 60px #444444;
 }
 
 .navLogo img{
